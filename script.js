@@ -40,14 +40,14 @@ playerImages.forEach(img => {
 function startComputerTurn(playerMove) {
     let count = 0;
     const shuffleInterval = setInterval(() => {
-        computerImage.src = `images/${moves[count % 3]}.png`;
+        computerImage.src = `images/${moves[count % 3]}.PNG`;
         count++;
     }, 500);
 
     setTimeout(() => {
         clearInterval(shuffleInterval);
         const computerMove = moves[Math.floor(Math.random() * 3)];
-        computerImage.src = `images/${computerMove}.png`;
+        computerImage.src = `images/${computerMove}.PNG`;
         determineWinner(playerMove, computerMove);
     }, 3000);
 }
@@ -91,7 +91,7 @@ resetBtn.addEventListener('click', () => {
     score = { wins: 0, losses: 0, ties: 0 };
     updateScore();
     outcomeText.textContent = "Make your move!";
-    computerImage.src = 'images/question-mark.png';
+    computerImage.src = 'images/question-mark.PNG';
     playerImages.forEach(i => i.classList.remove('selected'));
 });
 
