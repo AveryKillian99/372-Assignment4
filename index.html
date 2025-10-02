@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+  Name: Avery Killian
+  Date: 10.02.2025
+  CSC 372-01
+
+  This is the index.html page for my Rock, Paper, Scissors game. 
+  Users can select a throw, see the computer throw, view the outcome, 
+  and track the score. All game functionality is handled with JavaScript.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+
+    <!-- Player Throw Section -->
+    <section id="player-section">
+        <h2>Your Throw</h2>
+        <div class="player-choices">
+            <img src="images/rock.png" alt="Rock" data-move="rock">
+            <img src="images/paper.png" alt="Paper" data-move="paper">
+            <img src="images/scissors.png" alt="Scissors" data-move="scissors">
+        </div>
+    </section>
+
+    <!-- Computer Throw Section -->
+    <section id="computer-section">
+        <h2>Computer Throw</h2>
+        <img id="computer-throw" src="images/question-mark.png" alt="Computer's Throw">
+    </section>
+
+    <!-- Outcome Section -->
+    <section id="outcome-section">
+        <h2>Outcome</h2>
+        <p id="outcome-text">Make your move!</p>
+    </section>
+
+    <!-- Score Section -->
+    <section id="score-section">
+        <h2>Score</h2>
+        <p>Wins: <span id="wins">0</span></p>
+        <p>Losses: <span id="losses">0</span></p>
+        <p>Ties: <span id="ties">0</span></p>
+        <button id="reset-btn">Reset Score</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
